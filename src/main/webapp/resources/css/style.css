@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	/* background: #f3f3f3; */
+	background: #fff;
+}
+
+.bg-menu {
+	background-color: #1f2022;
+}
+
+img#logo-img {
+	height: 37px;
+	width: auto;
+}
+
+.text-logo {
+	font-weight: bold;
+	display: inline-block;
+	color: #00a261;
+}
+
+.carts a {
+	font-size: 25px;
+	color: #00a261;
+}
+
+.carts {
+	display: inline-block;
+	position: relative;
+}
+
+.count {
+	position: absolute;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	left: -10px;
+	top: -10px;
+	background-color: red;
+}
+
+.item-menu {
+	display: block;
+	font-weight: 900;
+	padding: 1em 2em;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin: 1px !important;
+}
+
+.header-second-menu, .item-menu {
+	background-color: black;
+}
+
+.item-menu:hover {
+	background-color: #00a261;
+}
+
+#footer {
+	color: white;
+	font-weight: bold;
+}
+
+#carouselExampleControls {
+	border: 1px solid #ffbe76;
+	background-color: white;
+}
+
+.f-container {
+	background-color: #ffbe76;
+}
+
+.jumbotron {
+	background-image: url("/Assignment/resources/images/background.jpg");
+	background-size: cover;
+	background-position: bottom;
+	color: white;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: center;
+}
+
+.promotion {
+	border: 1px solid green !important;
+	padding: 1em;
+	margin: 1px;
+	border-radius: 5px;
+}
+
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.screen {
+	width: 100vh;
+	height: 100vw !important;
+}
+
+p.card-text {
+	height: 100px;
+	overflow: hidden;
+}
+
+.left-menu, .right-body {
+	width: 100%;
+	border: 1px solid white;
+	min-height: 100vh !important;
+}
+
+.left-menu {
+	background-attachment: fixed !important;
+}
+
+.right-body {
+	background-image: url('images/bg-admin.jpg');
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+}
+
+.fixed {
+	position: sticky !important;
+}
+
+.toast {
+	position: fixed;
+	top: 50%;
+	z-index: 1000;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+/* Ribbon */
+.card{
+	position: relative;
+}
+.ribbon {
+    position: absolute;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    background-color: red;
+    padding: .5em 1em;
+    color: white;
+    font-weight: bold;
+    margin: 2px;
+    background-image: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+    border-radius: 10px;
+}

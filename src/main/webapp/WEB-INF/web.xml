@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<welcome-file-list>
+		<welcome-file>/views/index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- HANDLE ERROR PAGE -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/AppExceptionHandler</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/AppExceptionHandler</location>
+	</error-page>
+		<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/AppExceptionHandler</location>
+	</error-page>
+
+	<!-- CONFIGURATION FOR HOME -->
+	<servlet>
+		<servlet-name>JspHome</servlet-name>
+		<jsp-file>/views/001-Home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspHome</servlet-name>
+		<url-pattern>/home.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletHome</servlet-name>
+		<servlet-class>funix.edu.servlets.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletHome</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+	<!-- CONFIGURATION FOR LOGIN FUNCTION -->
+	<servlet>
+		<servlet-name>JspLogin</servlet-name>
+		<jsp-file>/views/003-Login.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspLogin</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletLogin</servlet-name>
+		<servlet-class>funix.edu.servlets.LoginServlet</servlet-class>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>admin@funix.edu.vn</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>funix.edu@</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletLogin</servlet-name>
+		<url-pattern>/loginAuthentication</url-pattern>
+	</servlet-mapping>
+
+	<!-- ADMIN PANEL -->
+	<servlet>
+		<servlet-name>JspAdminPanel</servlet-name>
+		<jsp-file>/views/007-AdminPanel.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspAdminPanel</servlet-name>
+		<url-pattern>/admin.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletAdminPanel</servlet-name>
+		<servlet-class>funix.edu.servlets.AdminPanelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletAdminPanel</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+
+	<!-- CART -->
+	<servlet>
+		<servlet-name>JspCart</servlet-name>
+		<jsp-file>/views/002-Carts.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspCart</servlet-name>
+		<url-pattern>/cart.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletCart</servlet-name>
+		<servlet-class>funix.edu.servlets.CartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletCart</servlet-name>
+		<url-pattern>/cart</url-pattern>
+	</servlet-mapping>
+
+	<!-- SHOP -->
+	<servlet>
+		<servlet-name>JspShop</servlet-name>
+		<jsp-file>/views/004-Shop.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspShop</servlet-name>
+		<url-pattern>/shop.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletShop</servlet-name>
+		<servlet-class>funix.edu.servlets.ShopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletShop</servlet-name>
+		<url-pattern>/shop</url-pattern>
+	</servlet-mapping>
+
+	<!-- PRODUCE -->
+	<servlet>
+		<servlet-name>JspProduce</servlet-name>
+		<jsp-file>/views/005-Produce.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspProduce</servlet-name>
+		<url-pattern>/produce.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletProduce</servlet-name>
+		<servlet-class>funix.edu.servlets.ProduceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletProduce</servlet-name>
+		<url-pattern>/produce</url-pattern>
+	</servlet-mapping>
+
+	<!-- CHECKOUT -->
+	<servlet>
+		<servlet-name>JspCheckout</servlet-name>
+		<jsp-file>/views/006-Checkout.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspCheckout</servlet-name>
+		<url-pattern>/checkout.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ServletCheckout</servlet-name>
+		<servlet-class>funix.edu.servlets.CheckoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletCheckout</servlet-name>
+		<url-pattern>/checkout</url-pattern>
+	</servlet-mapping>
+
+	<!-- LOAD -->
+	<servlet>
+		<servlet-name>ServletLoad</servlet-name>
+		<servlet-class>funix.edu.servlets.LoadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletLoad</servlet-name>
+		<url-pattern>/redirecting</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ERROR PAGE -->
+	<servlet>
+		<servlet-name>JspError</servlet-name>
+		<jsp-file>/views/error.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspError</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- CONFIGURATION ORDER -->
+	<servlet>
+		<servlet-name>ServletOrder</servlet-name>
+		<servlet-class>funix.edu.servlets.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletOrder</servlet-name>
+		<url-pattern>/order</url-pattern>
+	</servlet-mapping>
+	
+	<!-- THANKYOU PAGE -->
+	<servlet>
+		<servlet-name>JspThankyou</servlet-name>
+		<jsp-file>/views/008-Thankyou.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JspThankyou</servlet-name>
+		<url-pattern>/thankyou</url-pattern>
+	</servlet-mapping>
+
+</web-app>
